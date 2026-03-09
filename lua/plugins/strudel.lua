@@ -30,4 +30,6 @@ return {
       { "<leader>sx", function() require("strudel").execute() end, desc = "Execute Strudel Buffer" },
     },
   },
+
 }
+
