@@ -47,6 +47,18 @@ return {
 				},
 			})
 
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "gdscript",
+				callback = function()
+					if not vim.lsp.get_clients({ name = "gdscript", bufnr = 0 })[1] then
+						vim.lsp.start({
+							name = "gdscript",
+							cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
+						})
+					end
+				end,
+			})
+
 			vim.lsp.enable({
 				"clangd",
 				"ts_ls",
@@ -54,6 +66,7 @@ return {
 				"cssls",
 				"eslint",
 				"emmet_ls",
+				"gdscript",
 			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {

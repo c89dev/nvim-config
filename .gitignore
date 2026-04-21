@@ -1,11 +1,1 @@
-# Ignore swap, undo, backup files
-*.swp
-*.swx
-swap/
-undo/
-backup/
-
-# Ignore plugin directories
-lazy-lock.json      # optional: commit if you want exact versions
-pack/
-plugged/
+.codex
