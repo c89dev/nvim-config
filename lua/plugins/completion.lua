@@ -54,6 +54,7 @@ return {
 				}),
 
 				sources = {
+					{ name = "codecompanion" },
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
 					{ name = "buffer" },
